@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+/*设置homePage元素占满浏览器窗口  */
+body,
+html {
+    height: 100%;
+}
+
+#homePage {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部 */
+#homePage header {
+    flex-basis: 50px;
+    flex-grow: 1;
+    background-color: #333333;
+}
+
+#homePage header strong {
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+
+#homePage header nav {
+    position: absolute;
+    right: 20px;
+}
+
+#homePage header nav a {
+    color: white;
+    font-size: 12px;
+}
+
+/* 第一个section,绿色栏 */
+#homePage section:nth-of-type(1) {
+    flex-basis: 100px;
+    flex-grow: 1;
+    background-color: #2E8B57;
+}
+
+#homePage section:nth-of-type(1) ul {
+    position: absolute;
+    right: 70px;
+    top: 110px;
+}
+
+#homePage section:nth-of-type(1) ul li {
+    display: inline-block;
+    padding: 5px;
+    font-size: 12px;
+    background: rgba(173, 173, 173, 0.5);
+
+}
+
+#homePage section:nth-of-type(1) ul li:hover {
+    padding: 10px 7px 10px 7px;
+    background: rgba(173, 173, 173, 0.8);
+
+}
+
+/* 第二个section，主体栏 */
+#homePage section:nth-of-type(2) {
+    flex-basis: 400px;
+    flex-grow: 1;
+    position: relative;
+}
+
+/* nav部分 */
+#homePage section:nth-of-type(2) nav {
+    display: block;
+    position: relative;
+    top: 10px;
+    border-bottom: 1px solid #5B5B5B;
+}
+
+#homePage section:nth-of-type(2) nav:before {
+    content: "";
+    margin-left: 10%;
+}
+
+
+#homePage section:nth-of-type(2) nav a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #5B5B5B;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#homePage section:nth-of-type(2) nav a:nth-last-of-type(1) {
+    border-right: 1px solid #5B5B5B;
+}
+
+#homePage section:nth-of-type(2) nav a:hover {
+    background: rgba(91, 91, 91, 0.2);
+}
+
+/* mainContent部分 */
+#homePage section:nth-of-type(2) .mainContent {
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    line-height: 80px;
+}
+
+#homePage section:nth-of-type(2) .mainContent>div {
+    flex-grow: 1;
+    display: flex;
+
+}
+
+#homePage section:nth-of-type(2) .mainContent>div>article {
+    flex-grow: 1;
+}
+
+#homePage section:nth-of-type(2) .mainContent article {
+    border: 1px solid #5B5B5B;
+    margin: 5px;
+}
+
+
+/* footer部分 */
+#homePage footer {
+    flex-basis: 50px;
+    flex-grow: 1;
+    background-color: #5B5B5B;
+    text-align: center;
+}
+
+#homePage footer p {
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
